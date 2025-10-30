@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style>
+	#penguin{
+		width: 500px;
+		height: 200px;
+		background-size: contain;
+		background-repeat: no-repeat;
+		/*background-image:url(nobackgroundpenguin.png);*/
+		/*background-image: url(penguins.png);*/
+		background-image: url(penguin-slididng.gif);
+		position: absolute;
+		top: 75%;
+		left: -500px;
+
+	}
+
+	body{
+		background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScPlam-yUDJfajsJuSY84JB1sd3cQlYwHkJQ&s);
+		background-repeat: no-repeat;
+		background-size: 180%;
+	}
+
+
+	#penguin{
+		animation-name: walk;
+		animation-duration: 7s;
+		animation-iteration-count: infinite;
+	}
+
+	#penguin{
+		animation-name: waddle;
+		animation-duration: 3s;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+	} 
+
+	
+	@keyframes walk{
+		0%{
+			left: -400px;
+		}
+		100%{
+			left: 1500px;
+		}
+	}
+	@keyframes waddle{
+		0%{
+			/*transform: rotate(10deg);*/
+			left: -400px;
+		}
+
+		25%{
+			/*transform: rotate(-10deg);*/
+			left: 27.5px;
+
+		}
+
+		50%{
+			/*transform: rotate(10deg);*/
+			left: 455px;
+		}
+
+	
+
+		75%{
+			/*transform: rotate(-10deg);*/
+			left: 880px;
+		}
+
+	
+
+		100%{
+			/*transform: rotate(10deg);*/
+			left: 1450px;
+		}
+
+	}
+
+
+
+
+	</style>
+	
+
+</head>
+<body>
+	<div id="penguin"></div>
+</body>
+</html>

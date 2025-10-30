@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css"> 
+	#penguin{
+		width: 500px;
+		height: 200px;
+		background-size: contain;
+		background-repeat: no-repeat;
+		/*background-image:url(nobackgroundpenguin.png);*/
+		/*background-image: url(penguins.png);*/
+		background-image: url(penguin-slididng.gif);
+		position: absolute;
+		top: 50%;
+		left: -500px;
+
+	}
+
+	body{
+		background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScPlam-yUDJfajsJuSY84JB1sd3cQlYwHkJQ&s);
+		background-repeat: no-repeat;
+		background-size: 135%;
+	}
+
+
+	#penguin{
+		animation-name: walk;
+		animation-duration: 7s;
+		animation-iteration-count: infinite;
+	}
+
+	#penguin{
+		animation-name: waddle;
+		animation-duration: 3s;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+		z-index: -2;
+	} 
+
+	
+	@keyframes walk{
+		0%{
+			left: -400px;
+		}
+		100%{
+			left: 1500px;
+		}
+	}
+	@keyframes waddle{
+		0%{
+			/*transform: rotate(10deg);*/
+			left: -400px;
+		}
+
+		25%{
+			/*transform: rotate(-10deg);*/
+			left: 27.5px;
+
+		}
+
+		50%{
+			/*transform: rotate(10deg);*/
+			left: 455px;
+		}
+
+	
+
+		75%{
+			/*transform: rotate(-10deg);*/
+			left: 880px;
+		}
+
+	
+
+		100%{
+			/*transform: rotate(10deg);*/
+			left: 1450px;
+		}
+
+	}
+
+	#menu{
+			width: 100%;
+			height: 100px;
+			background-color: navy;
+			position: absolute;
+			top: 0px;
+
+		}
+		.options{
+			display: inline-block;
+			width: 32%;
+			text-align: center;
+			height: 100%;
+			background-size: contain;
+			background-repeat: no-repeat;
+			/*background-position: center;*/
+			color: yellow;
+			background-position:center;
+			}
+
+		#aboutme{
+			background-image: url(CookieM.gif);
+		}
+		#journal{
+			background-image: url(BongoC.gif);
+		}
+		#projects{
+			background-image: url(https://gifdb.com/images/high/portal-498-x-498-gif-qsdysegpqd1lkkqz.gif);
+		}
+		#donut{
+			background-image: url(donut.png);
+			position: absolute;
+			width: 200px;
+			height: 200px;
+			left: -1%;
+			background-size: contain;
+			top: 75%;
+			background-repeat: no-repeat;
+			transition: 2s;
+		}
+
+		#donut:hover{
+			transition: 2s;
+			top: 65%;
+		}
+		#smiley{
+			background-image: url(smiley.png);
+			position: absolute;
+			width: 75px;
+			height: 75px;
+			background-size: contain;
+			background-repeat: no-repeat;
+			top: 90%;
+			left: 3%;
+			z-index: -1;
+		}
+	#snowman{
+		background-image: url(snowman.png);
+		width: 300px;
+		height: 300px;
+		position: absolute;
+		background-size: contain;
+		background-repeat: no-repeat;
+		top: 75%;
+		right: -.5%;
+	}
+
+	#bigtext{
+		width: 600px;
+		height: 300px;
+		position: absolute;
+		top: 35%;
+		left: 30%;
+		background-image: url(text.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+	#exclamation{
+		background-image: url(exclamation.png);
+		width: 100px;
+		height: 100px;
+		position: absolute;
+		top: 35%;
+		left: 68.5%;
+		background-size: contain;
+		background-repeat: no-repeat;
+		transform: rotate(15deg);
+		transition: 1s;
+	}
+	#exclamation:hover{
+		transition: 1s;
+		width: 150px;
+		height: 150px;
+		left: 67%;
+	}
+
+	</style>
+
+</head>
+<body>
+
+	<div id="menu">
+
+	<a href="projects.html"><div id="projects" class="options">Projects</div> </a>
+	<a href="journal.html"> <div id="journal" class="options">Journal</div></a>
+	<a href="aboutme.html"> <div id="aboutme" class="options">About Me</div> </a>
+
+</div>
+<div id="donut"> </div>
+<div id="penguin"></div>
+<div id="smiley"></div>
+<div id="snowman"></div>
+<div id="bigtext"></div>
+<div id="exclamation"></div>
+</body>
+</html>
+
+
+<!-- find a way to fix this
+donut whole lifting to reveal smiley sun
+explosing snowman
+cookie plate
+menu bar -->
