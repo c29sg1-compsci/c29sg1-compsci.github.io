@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+
+		#block{
+			width: 245px;
+			height: 239px;
+			background-color: navy;
+			border-radius: 15%;
+			background-image: url(cat1.jpeg);
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+	</style>
+</head>
+<body>
+	<div id="block"></div>
+<script type="text/javascript">
+	block.addEventListener("click", function(event){
+		block.style.backgroundImage="url(cat2.jpeg)"
+		console.log(event)
+	})
+</script>
+</body>
+</html>
