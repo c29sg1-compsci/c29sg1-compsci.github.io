@@ -30,6 +30,7 @@
 <div id=jump></div>
 <center> <div id="above">CLICK FOR MORE CUTENESS </div></center>
 <script type="text/javascript">
+	const audio = new Audio('scream.mp3');
 	let click=0
 	document.addEventListener("click", function(){
 		click=click+1
@@ -37,12 +38,15 @@
 		if(click==1)
 		{
 			jump.style.opacity="1"
+			audio.play();
 		}
 
 		if(click==2)
 		{
 			jump.style.opacity="0"
 			click=0
+			audio.pause();
+  			audio.currentTime = 0;
 		}
 		
 	})
