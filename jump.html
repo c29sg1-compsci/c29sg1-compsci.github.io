@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		#jump{
+			height: 1300px;
+			width:1500px;
+			background-image: url(jump.png);
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: absolute;
+			top: 0%;
+			left: 0%;
+			opacity: 0;
+		}
+		
+		body{
+			background-image: url(panda.gif);
+			background-size: 100%;
+			background-repeat: no-repeat;
+		}
+
+		#above{
+			font-size: 50px;
+		}
+		
+	</style>
+</head>
+<body>
+<div id=jump></div>
+<center> <div id="above">CLICK FOR MORE CUTENESS </div></center>
+<script type="text/javascript">
+	let click=0
+	document.addEventListener("click", function(){
+		click=click+1
+
+		if(click==1)
+		{
+			jump.style.opacity="1"
+		}
+
+		if(click==2)
+		{
+			jump.style.opacity="0"
+			click=0
+		}
+		
+	})
+</script>
+</body>
+</html>

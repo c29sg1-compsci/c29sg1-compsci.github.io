@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+	
+	#fish{
+		width: 100px;
+		height: 100px;
+		background-image: url(frog.gif);
+		background-repeat: no-repeat;
+		background-size: contain;
+		position: absolute;
+		bottom: 10px;
+	}
+
+	#birds{
+		width: 100px;
+		height: 100px;
+		background-image: url(birds.gif);
+		background-repeat: no-repeat;
+		background-size: contain;
+		position: absolute;
+	}
+</style>
+</head>
+<body>
+
+<div id="fish"></div>
+<div id="birds"></div>
+
+<script type="text/javascript">
+	let fish = document.getElementById('fish')
+	fish.style.left="0px"
+
+	let birds = document.getElementById('birds')
+	birds.style.right="0px"
+
+	document.addEventListener("click", function(){
+		console.log(birds.style.right)
+		birds.style.right = parseInt(birds.style.right)+10+"px"
+	})
+
+	document.addEventListener("keypress", function(){
+		console.log(fish.style.left)
+		fish.style.left = parseInt(fish.style.left)+10+"px"
+	})
+</script>
+</body>
+</html>
