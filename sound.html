@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<style type="text/css">
+		
+		#record{
+			width: 200px;
+			height:200px;
+			background-color: white;
+			border-radius: 50%;
+			background-image: url(record.gif);
+			background-size: cover;
+			background-repeat: no-repeat;
+
+		}
+
+	</style>
+
+</head>
+<body>
+<div id="record"></div>
+<audio id="noise" src="noise.m4a"></audio>
+<script type="text/javascript">
+	
+	document.addEventListener("click", function(){
+		noise.play()
+		
+	})
+
+</script>
+
+</body>
+</html>

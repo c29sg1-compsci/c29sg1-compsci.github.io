@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+</head>
+<body>
+ <h2>Type something below:</h2>
+    <!-- Input field where the user types -->
+    <input type="text" id="live-input" placeholder="Start typing here...">
+    
+    <h2>What you typed:</h2>
+    <!-- Paragraph where the typed text will appear -->
+    <p id="display-area"></p>
+
+    <!-- Link to your JavaScript file -->
+    <script src="script.js">
+    const inputElement = document.getElementById('live-input');
+	const displayElement = document.getElementById('display-area');
+
+// Add an 'input' event listener to the input element
+inputElement.addEventListener('input', (event) => {
+    // Update the textContent of the display element with the current value of the input
+    displayElement.textContent = event.currentTarget.value;
+});
+</script>
+</body>
+</html>
