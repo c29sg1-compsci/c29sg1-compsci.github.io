@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		body{
+		background-color: black;
+		}
+		.snow{
+			background-color: white;
+			border-radius: 100%;
+		}
+		#bottom{
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			right: 20px;
+			bottom: 5%;
+			/*animation-name: roll;*/
+			animation-duration: 2s;
+			animation-iteration-count: 1;
+			animation-timing-function: linear;
+			animation-fill-mode: forwards;
+		}
+		#middle{
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			left: 20px;
+			bottom: 5%;
+			/*animation-name: roll2;*/
+			animation-duration: 2s;
+			animation-iteration-count: 1;
+			animation-timing-function: linear;
+			animation-fill-mode: forwards;
+		}
+
+		@keyframes roll{
+			0%{
+				right: 20px;
+			}
+			
+			
+			100%{
+				right: 700px;
+				width: 300px;
+				height: 300px;
+			}
+		}
+		@keyframes roll2{
+			0%{
+				left: 20px;
+			}
+			50%{
+				bottom: 5%;
+			}
+			90%{
+				bottom: 5%;
+			}
+			99%{
+				bottom:5%;
+			}
+			100%{
+				left: 400px;
+				width: 200px;
+				height: 200px;
+				/*top: 250px;*/
+			}
+		}
+		@keyframes jump{
+			0%{
+				bottom:5%;
+				left: 400px;
+				width: 200px;
+				height: 200px;
+			}
+			50%{
+				top: 400px;
+			}
+			100%{
+				left: 525px;
+				width: 200px;
+				height: 200px;
+				top: 300px;
+			}
+		}
+
+		#top{
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			left: 580px;
+			top: 30%;
+			/*opacity:0;*/
+			/*z-index: 1;*/
+		}
+
+	</style>
+</head>
+<body>
+<div class=snow id=bottom></div>
+<div class=snow id=middle></div>
+<div class=snow id=top></div>
+
+<script type="text/javascript">
+
+	let click=0;
+	bottom.addEventListener("click", function(){
+		bottom.style.animationName="roll"
+
+	})
+	middle.addEventListener("click", function(){
+
+		click=click+1
+		console.log(click)
+		 if (click==1){
+		 	middle.style.animationName="roll2"
+
+		}
+		if (click==2){
+			middle.style.animationName="jump"
+			
+		}
+		if (click==3){
+		 	top.style.opacity="0"
+		}
+
+	})
+	top.addEventListener("click", function(){
+		top.style.opacity="0"
+	})
+
+</script>
+</body>
+</html>

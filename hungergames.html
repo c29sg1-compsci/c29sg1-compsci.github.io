@@ -3,7 +3,17 @@
 <head>
 	<style type=text/css>
 		
+	body{
+		background-image: url(hunger2.png);
+		background-repeat: no-repeat;
+		background-size: 100%;
 
+	}
+	#namebox{
+		position: absolute;
+		top: 12%;
+		left: 28%;
+	}
 
 	</style>
 </head>
@@ -13,86 +23,138 @@
 <div id=instructions>write your name
 
 	<script type="text/javascript">
+
+
+	let name=""
 	
 document.addEventListener("keydown",function(event){
 	console.log(event)
+
+
+
 	if(event.key=="a"){
-		alert("a is for alpaca")
+		name=name+"a"
+		namebox.innerText=name
 	}
+
 	if(event.key=="b"){
-		alert("b is for baboon")
+		name=name+"b"
+		namebox.innerText=name
 	}
+
 	if(event.key=="c"){
-		alert("c is for camel")
+		name=name+"c"
+		namebox.innerText=name
 	}
 	if(event.key=="d"){
-		alert("d is for dolphin")
+		name=name+"d"
+		namebox.innerText=name
 	}
 	if(event.key=="e"){
-		alert("e is for elk")
+		name=name+"e"
+		namebox.innerText=name
 	}
 	if(event.key=="f"){
-		alert("f is for fox")
+		name=name+"f"
+		namebox.innerText=name
 	}
 	if(event.key=="g"){
-		alert("g is for gecko")
+		name=name+"g"
+		namebox.innerText=name
 	}
 	if(event.key=="h"){
-		alert("h is for human")
+		name=name+"h"
+		namebox.innerText=name
 	}
 	if(event.key=="i"){
-		alert("i is for iguana")
+		name=name+"i"
+		namebox.innerText=name
 	}
 	if(event.key=="j"){
-		alert("j is for jaguar")
+		name=name+"j"
+		namebox.innerText=name
 	}
 	if(event.key=="k"){
-		alert("k is for kangaroo")
+		name=name+"k"
+		namebox.innerText=name
 	}
 	if(event.key=="l"){
-		alert("l is for llama")
+		name=name+"l"
+		namebox.innerText=name
 	}
 	if(event.key=="m"){
-		alert("m is for moose")
+		name=name+"m"
+		namebox.innerText=name
 	}
 	if(event.key=="n"){
-		alert("n is for newt")
+		name=name+"n"
+		namebox.innerText=name
 	}
 	if(event.key=="o"){
-		alert("o is for orca")
+		name=name+"o"
+		namebox.innerText=name
 	}
 	if(event.key=="p"){
-		alert("p is for pelican")
+		name=name+"p"
+		namebox.innerText=name
 	}
 	if(event.key=="q"){
-		alert("q is for quail")
+		name=name+"q"
+		namebox.innerText=name
 	}
 	if(event.key=="r"){
-		alert("r is for rat")
+		name=name+"r"
+		namebox.innerText=name
 	}
 	if(event.key=="s"){
-		alert("s is for snake")
+		name=name+"s"
+		namebox.innerText=name
 	}
 	if(event.key=="t"){
-		alert("t is for turtle")
+		name=name+"t"
+		namebox.innerText=name
 	}
 	if(event.key=="u"){
-		alert("u is for unicorn fish")
+		name=name+"u"
+		namebox.innerText=name
 	}
 	if(event.key=="v"){
-		alert("v is for viper")
+		name=name+"v"
+		namebox.innerText=name
 	}
 	if(event.key=="w"){
-		alert("w is for whale")
+		name=name+"w"
+		namebox.innerText=name
 	}
 	if(event.key=="x"){
-		alert("x is for x-ray fish")
+		name=name+"x"
+		namebox.innerText=name
 	}
 	if(event.key=="y"){
-		alert("y is for yak")
+		name=name+"y"
+		namebox.innerText=name
+		console.log(name)
 
-	}if(event.key=="z"){
-		alert("z is for zebra")
+	}
+
+	if(event.key=="z"){
+		name=name+"z"
+		namebox.innerText=name
+				console.log(name)
+
+	}
+	if(event.key=="Enter"){
+		alert("your name has been entered. May the odds be ever in your favour")
+		namebox.innerText=name
+		
+		
+	}
+	if(event.key==" "){
+		// alert("your name has been entered. May the odds be ever in your favour")
+		name=name+" "
+		namebox.innerText=name
+		
+		
 	}
 })
 	</script>
