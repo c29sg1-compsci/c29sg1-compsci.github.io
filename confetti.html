@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<style type="text/css">
+		.confettis{
+			width: 10px;
+			height: 30px;
+			border:1px solid black;
+			/*display: inline-block;*/
+			position: absolute;
+		}
+	</style>
+
+</head>
+<body>
+
+<script type="text/javascript">
+	
+	function confetti (){
+		let confetti = document.createElement("div")
+		confetti.classList.add("confettis")
+		document.body.appendChild(confetti)
+
+		let r= Math.round(Math.random()*255)
+		let g= Math.round(Math.random()*255)
+		let b= Math.round(Math.random()*255)
+
+		confetti.style.backgroundColor ="rgb("+ r +","+g+","+b+")"
+		confetti.style.top = Math.random()*200+"px"
+		confetti.style.left = Math.random()*1500+"px"
+
+	}
+
+
+setInterval(confetti, 100)
+
+</script>
+
+</body>
+</html>

@@ -84,14 +84,27 @@
 			}
 		}
 
-		#top{
+		#head{
 			width: 100px;
 			height: 100px;
 			position: absolute;
 			left: 580px;
 			top: 30%;
-			/*opacity:0;*/
-			/*z-index: 1;*/
+			opacity:0;
+			z-index: 1;
+			background-image: url(snowface.png);
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+		#words{
+			color: white;
+			position: absolute;
+			font-size: 30px;
+			height: 100px;
+			width: 300px;
+			top: 10px;
+			left: 35%;
+
 		}
 
 	</style>
@@ -99,7 +112,9 @@
 <body>
 <div class=snow id=bottom></div>
 <div class=snow id=middle></div>
-<div class=snow id=top></div>
+<div class=snow id=head></div>
+<!-- <div id=words> I love you guys so much</div> -->
+<div id=picture1 class=pic></div>
 
 <script type="text/javascript">
 
@@ -121,12 +136,13 @@
 			
 		}
 		if (click==3){
-		 	top.style.opacity="0"
+		 	head.style.opacity="1"
+		 	head.style.backgroundImage
 		}
 
 	})
-	top.addEventListener("click", function(){
-		top.style.opacity="0"
+	head.addEventListener("click", function(){
+		head.style.opacity="1"
 	})
 
 </script>
