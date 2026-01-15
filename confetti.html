@@ -6,9 +6,36 @@
 		.confettis{
 			width: 10px;
 			height: 30px;
-			border:1px solid black;
+			/*border:1px solid black;*/
 			/*display: inline-block;*/
 			position: absolute;
+			/*transform: rotate(45deg);*/
+			animation-duration: 3s;
+			animation-iteration-count: 1;
+			animation-timing-function: linear;
+			animation-fill-mode: forwards;
+			animation-name: fall;
+			top: -10px;
+
+		}
+
+		@keyframes fall{
+			0%{
+				top: -10px;
+
+			}
+			100%{
+				top: 1000px;
+			}
+
+		}
+
+		body{
+			background-color: black;
+			background-image: url(congrats.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+
 		}
 	</style>
 
@@ -27,13 +54,16 @@
 		let b= Math.round(Math.random()*255)
 
 		confetti.style.backgroundColor ="rgb("+ r +","+g+","+b+")"
-		confetti.style.top = Math.random()*200+"px"
+		// confetti.style.top = Math.random()*5+"px"
 		confetti.style.left = Math.random()*1500+"px"
+		confetti.style.transform = "rotate"+"("+Math.random()*135+"deg"+")"
+		confetti.style.width = Math.random()*15+"px"
+		confetti.style.height = Math.random()*45+"px"
 
 	}
 
 
-setInterval(confetti, 100)
+setInterval(confetti, 10)
 
 </script>
 
