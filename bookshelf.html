@@ -6,7 +6,7 @@
 			font-size: 30px;
 			top: 20px;
 			left: 30px;
-			
+
 		}
 	</style>
 </head>
@@ -14,9 +14,17 @@
 <div id=picker> Today I will read: </div>
 	
 	<script type="text/javascript">
-		
-		let x = []
 
+
+	let books = ["the tourist", "the idiot", "this is how you lose the time war"]
+	// console.log(books[3])
+
+
+	document.addEventListener("click", function(){
+		let x = Math.round(Math.random()*6)
+		console.log(x)
+		alert(books[x])
+	})
 	</script>
 
 </body>

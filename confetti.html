@@ -14,12 +14,38 @@
 			animation-iteration-count: 1;
 			animation-timing-function: linear;
 			animation-fill-mode: forwards;
-			animation-name: fall;
+			animation-name: spin3d;
+			animation-iteration-count: infinite;
+			/*animation-name: fall;*/
+			animation-direction: alternate;
+			animation-timing-function: ease-in-out;
 			top: -10px;
 
 		}
 
-		@keyframes fall{
+
+		@keyframes spin{
+			from {
+				/*top: -10px;*/
+				
+				transform: rotate(var(--startRot));
+			}
+			to{
+				/*top: 1000px;*/
+				transform: rotate(var(--endRot));
+			}
+		}
+
+		@keyframes spin3d{
+			from{
+				transform: rotateX(-100deg) rotateY(-180deg);
+			}
+			to{
+				transform: rotateX(100deg)rotateY(180deg);
+			}
+		}
+
+		/*@keyframes fall{
 			0%{
 				top: -10px;
 
@@ -28,7 +54,7 @@
 				top: 1000px;
 			}
 
-		}
+		}*/
 
 		body{
 			background-color: black;
@@ -53,17 +79,33 @@
 		let g= Math.round(Math.random()*255)
 		let b= Math.round(Math.random()*255)
 
+		let startRot = Math.random()*-25 + "deg"
+		let endRot = Math.random()*25 + "deg"
+
+		confetti.style.setProperty("--startRot", startRot)
+		confetti.style.setProperty("--endRot", endRot)
 		confetti.style.backgroundColor ="rgb("+ r +","+g+","+b+")"
-		// confetti.style.top = Math.random()*5+"px"
+		confetti.style.top = Math.random()*50+"px"
 		confetti.style.left = Math.random()*1500+"px"
 		confetti.style.transform = "rotate"+"("+Math.random()*135+"deg"+")"
 		confetti.style.width = Math.random()*15+"px"
 		confetti.style.height = Math.random()*45+"px"
 
+
+		function fall() {
+			let fallFactor = 10
+			confetti.style.top = parseInt(confetti.style.top) + fallFactor + "px"
+			console.log(confetti.style.top)
+			if (parseInt (square.style.top) > 1000){
+				confetti.style.top = "10px"
+			}
+		}
+		setInterval(fall, 125)
+
+	
 	}
 
-
-setInterval(confetti, 10)
+setInterval(confetti, 20)
 
 </script>
 
