@@ -57,7 +57,7 @@
 		}*/
 
 		body{
-			background-color: black;
+			background-color: white;
 			background-image: url(congrats.png);
 			background-repeat: no-repeat;
 			background-size: cover;
@@ -68,8 +68,15 @@
 </head>
 <body>
 
+	<button id="drop">drop confetti</button>
+	<input type="color" value="#ff0000" id="picker">
+
 <script type="text/javascript">
+
+	let colors = ["#616163","#44FFD2","#87F6FF","#DAF5FF","FFBFA0"]
 	
+	let dropConfettiBtn = document.getElementById("drop")
+
 	function confetti (){
 		let confetti = document.createElement("div")
 		confetti.classList.add("confettis")
@@ -82,9 +89,15 @@
 		let startRot = Math.random()*-25 + "deg"
 		let endRot = Math.random()*25 + "deg"
 
+		let randomColorIndex = Math.floor(Math.random()* colors.length)
+
+		// confetti.style.backgroundColor = colors[randomColorIndex]
+
+		confetti.style.backgroundColor = colorPicker.value
+
 		confetti.style.setProperty("--startRot", startRot)
 		confetti.style.setProperty("--endRot", endRot)
-		confetti.style.backgroundColor ="rgb("+ r +","+g+","+b+")"
+		// confetti.style.backgroundColor ="rgb("+ r +","+g+","+b+")"
 		confetti.style.top = Math.random()*50+"px"
 		confetti.style.left = Math.random()*1500+"px"
 		confetti.style.transform = "rotate"+"("+Math.random()*135+"deg"+")"
@@ -95,9 +108,10 @@
 		function fall() {
 			let fallFactor = 10
 			confetti.style.top = parseInt(confetti.style.top) + fallFactor + "px"
-			console.log(confetti.style.top)
-			if (parseInt (square.style.top) > 1000){
+			// console.log(confetti.style.top)
+			if (parseInt (confetti.style.top) > 800){
 				confetti.style.top = "10px"
+				confetti.style.opacity = 0
 			}
 		}
 		setInterval(fall, 125)
@@ -106,6 +120,15 @@
 	}
 
 setInterval(confetti, 20)
+
+dropConfettiBtn.addEventListener("click", function(){
+	for (let i = 0; i < 20; i ++){
+		confetti()
+	}
+})
+
+let colorPicker = document.getElementById("picker")
+console.log(colorPicker.value)
 
 </script>
 
