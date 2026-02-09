@@ -16,6 +16,7 @@
 		.cart{
 			border:1px solid black;
 			min-width: 100px;
+			/*width: 100px;*/
 			height: 80px;
 			text-align: center;
 			position: relative;
@@ -57,36 +58,72 @@
 	<input type="text" id="person">
 
 	<div id="train">
-		<div class="cart">kate</div>
+		<!-- <div class="cart">kate</div>
 		<div class="cart">parker</div>
-		<div class="cart">sophie</div>
+		<div class="cart">sophie</div> -->
 	</div>
 
+	
 	<script>
-		let people = ["kate", "parker", "evan"]
-		// eventually change to books, and you habe living bookshelf
-		// let lastPerson = people.pop()
+		let people = ["kate", "parker", "sophie"]
+// i stands for index or item? im not sure tbh
+// i ++ means i + 1
+		let train = document.getElementById("train")
+		
+		function makeTrain(){
+			train.innerHTML = ""
+			for(let i = 0; i < people.length; i ++){
+				console.log(people[i])
+				let cart = document.createElement("div")
+				cart.classList.add("cart")
+				cart.textContent = people [i]
+				train.appendChild(cart)
+			}
+
+		}
+
+		makeTrain()
 		
 
+	
+		let addPerson = document.getElementById("add")
+		let removePerson = document.getElementById("remove")
+
+		
+
+
+		// eventually change to books, and you have living tbr
+		// could have thing where when you click on each book, it gives info, rating on goodreads, synopsis, and how long ago it was you said you would read it
+		// let lastPerson = people.pop()
+		
+		// people.push()
 		// adds people to array
 		// people.pop()
 		// removes last item in array
 		console.log(people)
 
-		let addPerson = document.getElementById("add")
-		let removePerson = document.getElementById("remove")
+		
 
 		addPerson.addEventListener("click", function(){
 			let personInput = document.getElementById("person")
+			makeTrain()
 			people.push(personInput.value)
 			console.log(people)
+			
 
 		})
+
+
 
 		removePerson.addEventListener("click", function(){
 			people.pop()
 			console.log(people)
+			makeTrain()
+		
 		})
+
+		
+
 
 		
 	
