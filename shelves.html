@@ -56,6 +56,7 @@
 	<button id="add">add person</button>
 
 	<input type="text" id="person">
+	<input type="color" value="#ffffff" id="colorPicker">
 
 	<div id="train">
 		<!-- <div class="cart">kate</div>
@@ -65,10 +66,61 @@
 
 	
 	<script>
-		let people = ["kate", "parker", "sophie"]
+
+		let kate = {
+			name: "kate",
+			studentId: "c28kk",
+			pronouns: "she/her"
+		}
+
+		let people = [
+			{
+				name: "kate",
+				fav_color: "#5CC8FF"
+			},
+			{
+				name: "sophie",
+				fav_color: "blue"
+			},
+			{
+				name: "mario",
+				fav_color: "black"
+			}
+		]
+
+		// let people = [
+		// 	kate,
+		// 	{
+		// 		name: "sophie",
+		// 		studentId: "c29sg1",
+		// 		pronouns: "she/her"
+		// 	},
+		// 	{
+		// 		name: "mario",
+		// 		studentId: "c29mg",
+		// 		pronouns: "he/him"
+		// 	} 
+		// 	]
+
+		
+
+		// let dalton = {
+		// 	year: 1919,
+		// 	studentNum: 1000,
+		// 	city: "New York"
+		// }
+
+		// let cookies = {
+		// 	taste: "sweet",
+		// 	type: "dessert",
+		// 	name: "cookies"
+
+		// }
+		// console.log (cookies.taste)
 // i stands for index or item? im not sure tbh
 // i ++ means i + 1
 		let train = document.getElementById("train")
+		let  colorPicker = document.getElementById("colorPicker")
 		
 		function makeTrain(){
 			train.innerHTML = ""
@@ -76,7 +128,9 @@
 				console.log(people[i])
 				let cart = document.createElement("div")
 				cart.classList.add("cart")
-				cart.textContent = people [i]
+				cart.textContent = people[i].name
+				console.log(people[i].fav_color)
+				cart.style.backgroundColor = people[i].fav_color
 				train.appendChild(cart)
 			}
 
@@ -106,8 +160,12 @@
 
 		addPerson.addEventListener("click", function(){
 			let personInput = document.getElementById("person")
+			people.push({
+				name: personInput.value,
+				fav_color: colorPicker.value
+			})
 			makeTrain()
-			people.push(personInput.value)
+
 			console.log(people)
 			
 
