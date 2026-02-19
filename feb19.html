@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<style type="text/css">
+		.book{
+			width: 75px;
+			height: 100px;
+		}
+		#wd{
+			width: 75px;
+			height: 100px;
+			background-color: lightblue;
+			display: inline-block
+			/*position: absolute;*/
+		}
+		#phm{
+			width: 75px;
+			height: 100px;
+			background-color: red;
+			display: inline-block;
+		}
+		#eg{
+			width: 75px;
+			height: 100px;
+			background-color: grey;
+			display: inline-block;
+		}
+
+
+	</style>
+</head>
+<body>
+
+	<div class="book" id="wd"> watership down</div>
+	<div class="book" id="phm"> project hail mary</div>
+	<div class="book" id="eg"> ender's game</div>
+	<script>
+
+
+		let projecthailmary = {
+			title: "project hail mary",
+			genre: "scifi",
+			pages: 496,
+			author: "Andy Weir",
+			goodreads: "4.5 stars"
+		}
+	
+		let watershipdown = {
+			title: "watership down",
+			genre: "kid/adventure",
+			pages: 450,
+			author: "Richard Adams",
+			goodreads: "4.1 stars"
+		}
+
+		let endersgame = {
+			title: "ender's game",
+			genre: "scifi",
+			pages: 324,
+			author: "Orson Scott Card",
+			goodreads: "4.3 stars"
+		}
+
+		let books = [projecthailmary, watershipdown, endersgame]
+
+
+		wd.addEventListener("click", function(){
+			console.log(watershipdown)
+			alert(watershipdown.goodreads)	
+		})
+
+		phm.addEventListener("click", function(){
+			console.log(projecthailmary)
+			alert(projecthailmary.goodreads)
+		})
+
+		eg.addEventListener("click", function(){
+			console.log(endersgame)
+			alert(endersgame.goodreads)
+		})
+
+		console.log(books)
+		console.log(books[1].genre)
+
+	</script>
+</body>
+</html>
