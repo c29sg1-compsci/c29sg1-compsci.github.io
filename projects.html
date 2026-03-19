@@ -243,7 +243,35 @@
 			animation-iteration-count: infinite;
 
 		}
+		#project12{
+			position: absolute;
+			width: 10px;
+			height: 130px;
+			writing-mode: vertical-lr;
+			line-height: 40px;
+			top: 10px;
+			right: 2%;
+			font-size: 18px;
+			border-radius: 100%;
+			/*background-color: rgb(200,80,50);*/
+			/*border: 3px solid black;*/
+			z-index: -1;
+			animation-name: upp;
+			animation-duration: 30s;
+			animation-timing-function: linear;
+			animation-fill-mode: forwards;
+			animation-iteration-count: infinite;
 
+		}
+
+		@keyframes upp{
+			0%{
+				top: 1000px;
+			}
+			100%{
+				top:0px;
+			}
+		}
 		@keyframes up{
 			0%{
 				top: 800px;
@@ -251,7 +279,7 @@
 			100%{
 				top: 0px;
 			}
-
+		
 	</style>
 </head>
 <body>
@@ -268,6 +296,7 @@
 <a href="pooh.html"><div id="project9" class="projects"> project 9</div></a>
 <a href="badbutton.html"><div id="project10" class="projects"> project 10</div></a>
 <a href="gallery.html"><div id="project11" class="projects"> project 11</div></a>
+<a href="p5intro.html"><div id="project12" class="projects"> project 12</div></a>
 
 	<a href="index.html"><div id="home" class="options">Home</div> </a>
 	<a href="journal.html"> <div id="journal" class="options">Journal</div></a>
