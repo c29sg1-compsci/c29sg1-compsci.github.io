@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.min.js"></script>
+</head>
+<body>
+	<script>
+		function setup(){
+			createCanvas(800,800)
+		}
+
+		function draw(){
+			background(200)
+			// push()
+			// translate(width/2,height/2) //new anchor point at center
+			// rotate(PI/8)
+			
+			// rotate(frameCount*0.05)
+			// rect(0,0,100,70)
+
+			// pop()
+			// rect(100,100,50,60)
+			push()
+			rectMode(CENTER)
+			translate(width/2,height/2)
+			rotate(frameCount*.01)
+			fill("white")
+			circle(-50,-50,40)
+			circle(50,-50,40)
+			circle(0,25,40)
+			circle(0,0,100) //face
+			fill("black")
+			rect(0,0,20,20)
+			rect(0,20,40,2.5)
+			rect(0,10,2.5,20)
+			
+			circle(-25,-25,5)
+			circle(25,-25,5)
+			pop()
+
+
+
+			// strokeWeight(0)
+			// fill("#8fb4cc")
+			// rect(1,240,400,300)
+			// fill("#c2cacf")
+			// push()
+			// translate(160, 150)
+			// rotate(QUARTER_PI);
+			// ellipse(0, 0, 20, 60)
+			// pop()
+			// push()
+			// translate(240, 150)
+			// rotate(-QUARTER_PI);
+			// ellipse(0, 0, 20, 60)
+			// pop()
+
+			// ellipse(200,180,70,130)
+			// circle(200,195,90)
+			// fill("#000000")
+			// circle(200,100,55)
+
+			// fill("#ffffff")
+			// circle(200,105,40,50)
+			// fill("#000000")
+			// rect(192.5,80,15,30)
+			// ellipse(170,240,40,20)
+			// ellipse(230,240,40,20)
+			// circle(186,105,5)
+			// circle(214,105,5)
+		}
+	</script>
+</body>
+</html>
