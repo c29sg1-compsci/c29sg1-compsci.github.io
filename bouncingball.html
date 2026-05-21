@@ -25,29 +25,60 @@
 
 		function draw(){
 			background(200)
-			if (xpos > width -25){ //could have done || xpos <25 instead of seperate if
-				xspeed *= -1 //equivalent to xspeed=xspeed * -1
-				color="#1F5673"
-			}
-			if (xpos<25){
-				xspeed *=-1
-				color="#759FBC"
-			}
+			// d=changeD(10,100)
+			d=50
+			// if (xpos > width -25){ //could have done || xpos <25 instead of seperate if
+			// 	xspeed *= -1 //equivalent to xspeed=xspeed * -1
+			// 	// color="#1F5673"
+			// }
+			// if (xpos<25){
+			// 	xspeed *=-1
+			// 	// color="#759FBC"
+			// }
 			
-			if (ypos > height -25){
-				yspeed *= -1
-				color="#90C3C8"
-			}
+			// if (ypos > height -25){
+			// 	yspeed *= -1
+			// 	// color="#90C3C8"
+			// }
 
-			if (ypos<25){
-				yspeed *=-1
-				color="#B9B8D3"
-			}
+			// if (ypos<25){
+			// 	yspeed *=-1
+			// 	// color="#B9B8D3"
+			// }
+			
+			bounce()
+			changeBallColor(d)
 			
 			xpos += xspeed //equivalent to xpos = xpos + xspeed
 			ypos += yspeed
 			fill(color)
-			circle(xpos,ypos,50)
+			circle(xpos,ypos,d)
+		}
+		function bounce(){
+			if (xpos +d/2> width || xpos -d/2 <0){
+				xspeed *= -1
+			}
+			if (ypos +d/2> width || ypos -d/2 <0){
+				yspeed *= -1
+			}
+		}
+		function changeBallColor(){
+			if (xpos>width-25){
+				color="#1F5673"
+			}
+
+			if (xpos<25){
+				color="#759FBC"
+			}
+
+			if (ypos>height-25){
+				color="#90C3C8"
+			}
+
+			if (ypos<25){
+				color="#B9B8D3"
+			}
+
 		}
 	</script>
 </body>
